@@ -1,0 +1,64 @@
+<header id="site-header"
+    class="fixed w-full top-0 left-0 z-50 transition-all duration-150 bg-transparent text-white border-b border-transparent">
+    <div id="header-container"
+        class="container mx-auto px-4 md:px-8 py-5 md:py-6 flex justify-between items-center transition-all duration-150">
+
+        <a href="index.html" class="flex items-center logo-link transition-transform duration-200 hover:scale-110">
+            <img src="assets/imgs/logo.png" alt="[Company Name] Logo"
+                class="logo-white w-[109px] md:w-[136px] lg:w-[163px] h-auto object-contain">
+
+            <img src="assets/imgs/logo-dark.png" alt="[Company Name] Logo"
+                class="logo-dark w-[109px] md:w-[136px] lg:w-[163px] h-auto object-contain">
+        </a>
+
+        <nav class="hidden xl:flex items-center gap-8 font-body text-[17px] font-semibold tracking-wide">
+            <a href="javascript:void(0);" style="cursor: default;" class="whitespace-nowrap">About Us</a>
+            <a href="javascript:void(0);" style="cursor: default;" class="whitespace-nowrap">Services</a>
+            <a href="javascript:void(0);" style="cursor: default;" class="whitespace-nowrap">Gallery</a>
+            <a href="javascript:void(0);" style="cursor: default;" class="whitespace-nowrap">FAQs</a>
+            
+            <div class="flex items-center gap-8">
+                <a href="contact.html" class="whitespace-nowrap">Contact</a>
+                
+                <a href="javascript:void(0);" style="cursor: default;" class="group gap-1.5 whitespace-nowrap">
+                    Location Placeholder
+                    <svg class="w-4 h-4 shrink-0 group-hover:-translate-y-1 transition-transform duration-150"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <button id="menuBtn" aria-expanded="false" aria-controls="mobileNav"
+            class="xl:hidden text-white focus:outline-none p-2 -mr-2 transition-colors duration-150"
+            aria-label="Toggle Mobile Menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobileNav"
+        class="xl:hidden absolute top-full left-0 w-full px-4 pt-2 pb-6 transition-all duration-200 ease-out opacity-0 invisible -translate-y-4 pointer-events-none">
+        <div
+            class="bg-brand-dark/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl overflow-hidden">
+            <div class="flex flex-col px-6 py-6 space-y-4 text-center font-body text-white">
+                <a href="javascript:void(0);" style="cursor: default;"
+                    class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">About Us</a>
+                <a href="javascript:void(0);" style="cursor: default;"
+                    class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">Services</a>
+                <a href="javascript:void(0);" style="cursor: default;"
+                    class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">Gallery</a>
+                <a href="javascript:void(0);" style="cursor: default;"
+                    class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">FAQs</a>
+                <div class="pt-6 mt-2 border-t border-white/10">
+                    <a href="contact.html"
+                        class="inline-block w-full px-8 py-3.5 bg-brand-accent text-brand-dark font-bold rounded-xl hover:bg-white transition-colors duration-150">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

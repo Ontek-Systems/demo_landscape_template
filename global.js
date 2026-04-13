@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+
+    await loadComponents();
 
     // ==========================================
     // 1. MOBILE MENU LOGIC (Smooth Animation)
@@ -26,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    initHeaderScroll();
+
     // ==========================================
     // 2. SCROLL REVEAL ANIMATIONS
     // ==========================================
@@ -48,3 +52,54 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
 
 });
+
+async function loadComponents() {
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    if (headerPlaceholder) {
+        try {
+            const resp = await fetch('components/header.html');
+            const html = await resp.text();
+            headerPlaceholder.outerHTML = html;
+        } catch (e) {
+            console.error('Error loading header:', e);
+        }
+    }
+
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (footerPlaceholder) {
+        try {
+            const resp = await fetch('components/footer.html');
+            const html = await resp.text();
+            footerPlaceholder.outerHTML = html;
+        } catch (e) {
+            console.error('Error loading footer:', e);
+        }
+    }
+}
+
+function initHeaderScroll() {
+    const header = document.getElementById('site-header');
+    const container = document.getElementById('header-container');
+
+    if (header && container) {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+                header.classList.remove('bg-transparent', 'border-transparent');
+                header.classList.add('bg-brand-dark/95', 'backdrop-blur-md', 'shadow-md', 'border-white/10');
+                container.classList.remove('py-5', 'md:py-6');
+                container.classList.add('py-2', 'md:py-3');
+            } else {
+                header.classList.remove('scrolled');
+                header.classList.add('bg-transparent', 'border-transparent');
+                header.classList.remove('bg-brand-dark/95', 'backdrop-blur-md', 'shadow-md', 'border-white/10');
+                container.classList.add('py-5', 'md:py-6');
+                container.classList.remove('py-2', 'md:py-3');
+            }
+        };
+        
+        window.addEventListener('scroll', handleScroll);
+        // call once
+        handleScroll();
+    }
+}

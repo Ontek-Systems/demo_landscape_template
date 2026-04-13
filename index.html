@@ -110,94 +110,7 @@
 
 <body class="flex flex-col min-h-screen bg-brand-beige text-brand-text antialiased">
 
-    <header id="site-header"
-        class="fixed w-full top-0 left-0 z-50 transition-all duration-150 bg-transparent text-white border-b border-transparent">
-        <div id="header-container"
-            class="container mx-auto px-4 md:px-8 py-5 md:py-6 flex justify-between items-center transition-all duration-150">
-
-            <a href="index.html" class="flex items-center logo-link transition-transform duration-200 hover:scale-110">
-                <img src="assets/imgs/logo.png" alt="[Company Name] Logo"
-                    class="logo-white w-[109px] md:w-[136px] lg:w-[163px] h-auto object-contain">
-
-                <img src="assets/imgs/logo-dark.png" alt="[Company Name] Logo"
-                    class="logo-dark w-[109px] md:w-[136px] lg:w-[163px] h-auto object-contain">
-            </a>
-
-            <nav class="hidden xl:flex items-center gap-8 font-body text-[17px] font-semibold tracking-wide">
-                <a href="about.html" class="whitespace-nowrap">[Nav Link 1]</a>
-                <a href="services.html" class="whitespace-nowrap">[Nav Link 2]</a>
-                <a href="gallery.html" class="whitespace-nowrap">[Nav Link 3]</a>
-                <a href="index.html#faq" class="whitespace-nowrap">[Nav Link 4]</a>
-                
-                <div class="flex items-center gap-8">
-                    <a href="contact.html" class="whitespace-nowrap">[Nav Link 5]</a>
-                    
-                    <a href="[Google Maps Link]" target="_blank" rel="noopener noreferrer"
-                        class="group gap-1.5 whitespace-nowrap">
-                        [City, Region]
-                        <svg class="w-4 h-4 shrink-0 group-hover:-translate-y-1 transition-transform duration-150"
-                            fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                        </svg>
-                    </a>
-                </div>
-            </nav>
-
-            <button id="menuBtn" aria-expanded="false" aria-controls="mobileNav"
-                class="xl:hidden text-white focus:outline-none p-2 -mr-2 transition-colors duration-150"
-                aria-label="Toggle Mobile Menu">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-        </div>
-
-        <div id="mobileNav"
-            class="xl:hidden absolute top-full left-0 w-full px-4 pt-2 pb-6 transition-all duration-200 ease-out opacity-0 invisible -translate-y-4 pointer-events-none">
-            <div
-                class="bg-brand-dark/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl overflow-hidden">
-                <div class="flex flex-col px-6 py-6 space-y-4 text-center font-body text-white">
-                    <a href="about.html"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">[Nav Link 1]</a>
-                    <a href="services.html"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">[Nav Link 2]</a>
-                    <a href="gallery.html"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">[Nav Link 3]</a>
-                    <a href="index.html#faq"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">[Nav Link 4]</a>
-                    <div class="pt-6 mt-2 border-t border-white/10">
-                        <a href="contact.html"
-                            class="inline-block w-full px-8 py-3.5 bg-brand-accent text-brand-dark font-bold rounded-xl hover:bg-white transition-colors duration-150">[CTA Button]</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.getElementById('site-header');
-            const container = document.getElementById('header-container');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                    header.classList.remove('bg-transparent', 'border-transparent');
-                    header.classList.add('bg-brand-dark/95', 'backdrop-blur-md', 'shadow-md', 'border-white/10');
-                    container.classList.remove('py-5', 'md:py-6');
-                    container.classList.add('py-2', 'md:py-3');
-                } else {
-                    header.classList.remove('scrolled');
-                    header.classList.add('bg-transparent', 'border-transparent');
-                    header.classList.remove('bg-brand-dark/95', 'backdrop-blur-md', 'shadow-md', 'border-white/10');
-                    container.classList.add('py-5', 'md:py-6');
-                    container.classList.remove('py-2', 'md:py-3');
-                }
-            });
-        });
-    </script>
+    <div id="header-placeholder"></div>
 <main>
     <script type="application/ld+json">
     {
@@ -228,121 +141,132 @@
 
 <section class="relative min-h-[100svh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-brand-dark">
         
-        <div id="hero-slideshow" class="absolute inset-0 w-full h-full z-0">
-            <img src="assets/imgs/lawn-maintenance-hero.jpg" alt="Lawn Maintenance Boxford" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-100">
-            <img src="assets/imgs/landscaping-hero.jpg" alt="Landscaping Boxford" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0">
-            <img src="assets/imgs/tree-hedging-hero.jpg" alt="Tree and Hedging Boxford" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0">
-            <img src="assets/imgs/fencing-hero.jpg" alt="Fencing Services Boxford" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0">
+    <div id="hero-slideshow" class="absolute inset-0 w-full h-full z-0">
+        <img src="assets/imgs/s1.jpg" alt="Lawn Maintenance Boxford" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-100">
+        <img src="assets/imgs/s2.jpg" alt="Landscaping Boxford" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0">
+        <img src="assets/imgs/s3.jpg" alt="Tree and Hedging Boxford" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0">
+        <img src="assets/imgs/s4.jpg" alt="Fencing Services Boxford" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0">
+    </div>
+
+    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
+
+    <!-- Top Vignette for Navbar -->
+    <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/80 to-transparent z-10 pointer-events-none"></div>
+
+    <div class="w-full max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 relative z-20 flex flex-col items-center justify-center text-center mt-12 lg:mt-0">
+
+<div class="w-full flex flex-col items-center text-center reveal reveal-up py-16 px-4 sm:px-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/75 via-black/50 to-transparent">
+
+    <div class="flex items-center justify-center gap-1 mb-6">
+        <svg class="w-6 h-6 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="w-6 h-6 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="w-6 h-6 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="w-6 h-6 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="w-6 h-6 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+
+    <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 leading-[1.1] text-white drop-shadow-2xl max-w-4xl mx-auto">
+        Expert Gardening & Landscaping in Boxford
+    </h1>
+
+    <p class="font-body text-base md:text-base lg:text-lg mb-8 text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+        With 18 years of experience, Ben and the CO10 Gardening Specialists team provide top-quality lawn maintenance, tree & hedging, landscaping, and fencing.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6 w-full sm:w-auto">
+
+        <a href="contact.html"
+            class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#0fdb62] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+            <span
+                class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0dae4d] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+
+            <span
+                class="relative z-10 text-brand-dark transition-colors duration-500 group-hover:text-white">
+                Get Your Free Quote
+            </span>
+
+            <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                </svg>
+            </span>
+        </a>
+
+        <div class="hidden sm:block w-[2px] h-8 bg-white/20 rounded-full mx-2"></div>
+
+        <div class="flex items-center justify-center gap-3 text-white font-body font-bold text-lg">
+            <a href="tel:+447779580182"
+                class="tracking-wide underline underline-offset-[6px] decoration-2 decoration-white hover:text-[#D4AF37] hover:decoration-[#D4AF37] transition-all duration-300">
+                or call Ben
+            </a>
         </div>
+    </div>
+</div>
 
-        <div class="absolute inset-0 bg-black/50 sm:bg-black/60 z-10"></div>
+    </div>
 
-        <div class="w-full max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 relative z-20 flex flex-col items-center justify-center text-center mt-12 lg:mt-0">
-
-            <div class="w-full flex flex-col items-center text-center reveal reveal-up">
-
-                <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 leading-[1.1] text-white drop-shadow-2xl max-w-4xl mx-auto">
-                    Expert Gardening & Landscaping in Boxford
-                </h1>
-
-                <p class="font-body text-base md:text-base lg:text-lg mb-8 text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md">
-                    With 18 years of experience, Ben and the CO10 Gardening Specialists team provide top-quality lawn maintenance, tree & hedging, landscaping, and fencing.
-                </p>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6 w-full sm:w-auto">
-
-                    <a href="contact.html"
-                        class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#0fdb62] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
-
-                        <span
-                            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0dae4d] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
-
-                        <span
-                            class="relative z-10 text-brand-dark transition-colors duration-500 group-hover:text-white">
-                            Get Your Free Quote
-                        </span>
-
-                        <span class="relative z-10 w-10 h-10 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    d="M5 12h14m-6-6l6 6-6 6"></path>
-                            </svg>
-                        </span>
-                    </a>
-
-                    <div class="hidden sm:block w-[2px] h-8 bg-white/20 rounded-full mx-2"></div>
-
-                    <div class="flex items-center justify-center gap-3 text-white font-body font-bold text-lg">
-                        <a href="tel:+447779580182"
-                            class="tracking-wide underline underline-offset-[6px] decoration-2 decoration-white hover:text-[#D4AF37] hover:decoration-[#D4AF37] transition-all duration-300">
-                            or call Ben
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const heroSlides = document.querySelectorAll('#hero-slideshow .slide');
-                if (heroSlides.length > 0) {
-                    let currentSlide = 0;
-                    setInterval(() => {
-                        heroSlides[currentSlide].classList.remove('opacity-100');
-                        heroSlides[currentSlide].classList.add('opacity-0');
-                        currentSlide = (currentSlide + 1) % heroSlides.length;
-                        heroSlides[currentSlide].classList.remove('opacity-0');
-                        heroSlides[currentSlide].classList.add('opacity-100');
-                    }, 4000);
-                }
-            });
-        </script>
-    </section>
-
-    <style>
-        .scrolling-wrapper {
-            overflow: hidden;
-            white-space: nowrap;
-            display: flex;
-            width: 100%;
-            cursor: default;
-        }
-
-        .scrolling-track {
-            display: flex;
-            width: max-content;
-            animation: scrollBanner 25s linear infinite;
-        }
-
-        .scrolling-wrapper:hover .scrolling-track,
-        .scrolling-track:hover {
-            animation-play-state: running !important;
-        }
-
-        @keyframes scrollBanner {
-            0% {
-                transform: translateX(0);
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroSlides = document.querySelectorAll('#hero-slideshow .slide');
+            if (heroSlides.length > 0) {
+                let currentSlide = 0;
+                setInterval(() => {
+                    heroSlides[currentSlide].classList.remove('opacity-100');
+                    heroSlides[currentSlide].classList.add('opacity-0');
+                    currentSlide = (currentSlide + 1) % heroSlides.length;
+                    heroSlides[currentSlide].classList.remove('opacity-0');
+                    heroSlides[currentSlide].classList.add('opacity-100');
+                }, 4000);
             }
+        });
+    </script>
+</section>
 
-            100% {
-                transform: translateX(-50%);
-            }
+<style>
+    .scrolling-wrapper {
+        overflow: hidden;
+        white-space: nowrap;
+        display: flex;
+        width: 100%;
+        cursor: default;
+    }
+
+    .scrolling-track {
+        display: flex;
+        width: max-content;
+        animation: scrollBanner 25s linear infinite;
+    }
+
+    .scrolling-wrapper:hover .scrolling-track,
+    .scrolling-track:hover {
+        animation-play-state: running !important;
+    }
+
+    @keyframes scrollBanner {
+        0% {
+            transform: translateX(0);
         }
 
-        .hover-item {
-            transition: opacity 0.3s ease;
+        100% {
+            transform: translateX(-50%);
         }
+    }
 
-        .scrolling-wrapper:hover .hover-item {
-            opacity: 0.5;
-        }
+    .hover-item {
+        transition: opacity 0.3s ease;
+    }
 
-        .scrolling-wrapper .hover-item:hover {
-            opacity: 1;
-        }
-    </style>
+    .scrolling-wrapper:hover .hover-item {
+        opacity: 0.5;
+    }
+
+    .scrolling-wrapper .hover-item:hover {
+        opacity: 1;
+    }
+</style>
 
     <div class="bg-brand-green text-brand-beige py-5 border-y border-brand-dark/20 shadow-inner">
         <div class="scrolling-wrapper">
@@ -491,121 +415,115 @@
         </div>
     </div>
 
-    <section
-        class="relative min-h-[100svh] py-20 lg:py-32 flex items-center justify-center bg-[#164a2a] text-white overflow-hidden">
-        <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+    <section class="relative py-20 lg:py-32 flex items-center justify-center bg-[#F5F0E8] overflow-hidden">
+    <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
 
-            <div class="flex flex-col items-center gap-16 lg:gap-20">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-                <div class="w-full max-w-4xl flex flex-col items-center text-center reveal reveal-up">
+            <!-- Left: Text Content -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start text-left reveal reveal-up">
 
-                    <span
-                        class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default">
-                        [Section Tagline]
-                    </span>
+                <span class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default">
+                    [Section Tagline]
+                </span>
 
-                    <h2
-                        class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal text-white mb-8 leading-tight flex flex-col items-center cursor-default">
-                        [Section Headline Text]
-                        <span
-                            class="block w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40 group-hover:bg-[#0fdb62]/80"></span>
-                    </h2>
+                <h2 class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal text-[#164a2a] mb-6 leading-tight flex flex-col items-start cursor-default">
+                    [Section Headline Text]
+                    <span class="block w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40 group-hover:bg-[#0fdb62]/80"></span>
+                </h2>
 
-                    <div
-                        class="font-body text-base sm:text-lg md:text-xl text-white/80 leading-relaxed space-y-6 mb-10 w-full px-4">
-                        <p>
-                            [Company Philosophy or descriptive text goes here. Explain what sets the service apart and builds trust with the customer.]
+                <div class="font-body text-base sm:text-lg text-[#164a2a]/70 leading-relaxed space-y-5 mb-10 w-full">
+                    <p>
+                        [Company Philosophy or descriptive text goes here. Explain what sets the service apart and builds trust with the customer.]
+                    </p>
+                    <p>
+                        [Second paragraph of descriptive text. Continue building trust and explaining the company's story or values here.]
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 sm:gap-8 border-t border-[#164a2a]/20 pt-8 mt-2 mb-12 w-full max-w-lg">
+                    <div class="group flex flex-col items-start cursor-default">
+                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#164a2a] transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
+                            <span class="auto-counter" data-target="10">0</span>+
+                        </p>
+                        <p class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#164a2a]/60 transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
+                            [Stat Text 1]
                         </p>
                     </div>
 
-                    <div
-                        class="grid grid-cols-3 gap-4 sm:gap-8 md:gap-10 border-t border-white/20 pt-8 mt-2 mb-12 w-full max-w-lg mx-auto">
-                        <div class="group flex flex-col items-center cursor-default">
-                            <p
-                                class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
-                                <span class="auto-counter" data-target="10">0</span>
-                            </p>
-                            <p
-                                class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 opacity-80 font-bold text-center text-white transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
-                                [Stat Text 1]
-                            </p>
-                        </div>
-
-                        <div class="group flex flex-col items-center cursor-default">
-                            <p
-                                class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
-                                <span class="auto-counter" data-target="5">0</span>★
-                            </p>
-                            <p
-                                class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 opacity-80 font-bold text-center text-white transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
-                                [Stat Text 2]
-                            </p>
-                        </div>
-
-                        <div class="group flex flex-col items-center cursor-default">
-                            <p
-                                class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
-                                <span class="auto-counter" data-target="100">0</span>%
-                            </p>
-                            <p
-                                class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 opacity-80 font-bold text-center text-white transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
-                                [Stat Text 3]
-                            </p>
-                        </div>
+                    <div class="group flex flex-col items-start cursor-default">
+                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#164a2a] transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
+                            <span class="auto-counter" data-target="5">0</span>★
+                        </p>
+                        <p class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#164a2a]/60 transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
+                            [Stat Text 2]
+                        </p>
                     </div>
 
-                    <a href="about.html"
-                        class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-white text-[#164a2a] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 z-10">
-
-                        <span
-                            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0fdb62] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
-
-                        <span class="relative z-10 transition-colors duration-500 group-hover:text-white">[Secondary CTA Text]</span>
-
-                        <span
-                            class="relative z-10 w-10 h-10 bg-[#164a2a] rounded-full flex items-center justify-center transition-colors duration-500 group-hover:bg-white/20">
-                            <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    d="M5 12h14m-6-6l6 6-6 6"></path>
-                            </svg>
-                        </span>
-                    </a>
-
+                    <div class="group flex flex-col items-start cursor-default">
+                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#164a2a] transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
+                            <span class="auto-counter" data-target="100">0</span>%
+                        </p>
+                        <p class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#164a2a]/60 transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
+                            [Stat Text 3]
+                        </p>
+                    </div>
                 </div>
 
-                <div class="w-full max-w-5xl relative h-[300px] sm:h-[450px] lg:h-[600px] rounded-[1.5rem] overflow-hidden group reveal reveal-up"
-                    style="transition-delay: 200ms;" id="trust-slideshow">
-                    
-                    <img src="assets/imgs/tree-work.jpg" alt="[Slideshow Image 1 Alt]" loading="lazy" decoding="async"
-                        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100 group-hover:scale-105">
-                    
-                    <img src="assets/imgs/hedge-trimming.jpg" alt="[Slideshow Image 2 Alt]" loading="lazy" decoding="async"
-                        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:scale-105">
-                        
-                    <img src="assets/imgs/about1.jpg" alt="[Slideshow Image 3 Alt]" loading="lazy" decoding="async"
-                        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:scale-105">
-                        
-                    <script>
-                        document.addEventListener('DOMContentLoaded', () => {
-                            const slides = document.querySelectorAll('#trust-slideshow .slide');
-                            if (slides.length > 0) {
-                                let currentSlide = 0;
-                                setInterval(() => {
-                                    slides[currentSlide].classList.remove('opacity-100');
-                                    slides[currentSlide].classList.add('opacity-0');
-                                    currentSlide = (currentSlide + 1) % slides.length;
-                                    slides[currentSlide].classList.remove('opacity-0');
-                                    slides[currentSlide].classList.add('opacity-100');
-                                }, 3500);
-                            }
-                        });
-                    </script>
-                </div>
+                <a href="about.html"
+                    class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#E3E4DD] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+                    <span
+                        class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[35] z-0"></span>
+
+                    <span class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
+                        [Learn More About Us]
+                    </span>
+
+                    <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
 
             </div>
+
+            <!-- Right: Slideshow Image -->
+            <div class="w-full lg:w-1/2 relative h-[300px] sm:h-[450px] lg:h-[600px] rounded-[1.5rem] overflow-hidden group reveal reveal-up"
+                style="transition-delay: 200ms;" id="trust-slideshow">
+
+                <img src="assets/imgs/tree-work.jpg" alt="[Slideshow Image 1 Alt]" loading="lazy" decoding="async"
+                    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100 group-hover:scale-105">
+
+                <img src="assets/imgs/hedge-trimming.jpg" alt="[Slideshow Image 2 Alt]" loading="lazy" decoding="async"
+                    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:scale-105">
+
+                <img src="assets/imgs/cta.jpg" alt="[Slideshow Image 3 Alt]" loading="lazy" decoding="async"
+                    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:scale-105">
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const slides = document.querySelectorAll('#trust-slideshow .slide');
+                        if (slides.length > 0) {
+                            let currentSlide = 0;
+                            setInterval(() => {
+                                slides[currentSlide].classList.remove('opacity-100');
+                                slides[currentSlide].classList.add('opacity-0');
+                                currentSlide = (currentSlide + 1) % slides.length;
+                                slides[currentSlide].classList.remove('opacity-0');
+                                slides[currentSlide].classList.add('opacity-100');
+                            }, 3500);
+                        }
+                    });
+                </script>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -716,7 +634,7 @@
                     style="transition-delay: 100ms;">
 
                     <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
-                        <img src="assets/imgs/jet-washing.jpg" alt="[Service 2 Alt Text]" loading="lazy"
+                        <img src="assets/imgs/slider3.jpg" alt="[Service 2 Alt Text]" loading="lazy"
                             decoding="async"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
@@ -891,10 +809,10 @@
                 <div class="w-full lg:w-7/12 reveal reveal-up" style="transition-delay: 100ms;">
                     <div
                         class="ba-slider touch-pan-y relative w-full aspect-[4/3] md:aspect-[16/9] rounded-[2.5rem] overflow-hidden cursor-ew-resize shadow-2xl border-4 border-white/5 group">
-                        <img src="assets/imgs/After_2.jpg" alt="[After Image Alt]"
+                        <img src="assets/imgs/after.jpg" alt="[After Image Alt]"
                             loading="lazy" decoding="async"
                             class="absolute inset-0 w-full h-full object-cover pointer-events-none">
-                        <img src="assets/imgs/Before_2.jpg" alt="[Before Image Alt]" loading="lazy"
+                        <img src="assets/imgs/before.jpg" alt="[Before Image Alt]" loading="lazy"
                             decoding="async"
                             class="ba-before absolute inset-0 w-full h-full object-cover pointer-events-none shadow-[2px_0_10px_rgba(0,0,0,0.5)]"
                             style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
@@ -1764,7 +1682,7 @@
                     style="transition-delay: 200ms;">
                     <div
                         class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[1.5rem] overflow-hidden shadow-2xl">
-                        <img src="assets/imgs/footer3.jpg" alt="[Footer Image 2 Alt]" loading="lazy"
+                        <img src="assets/imgs/footer2.png" alt="[Footer Image 2 Alt]" loading="lazy"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-110">
                     </div>
                 </div>
@@ -1876,115 +1794,7 @@
     });
 </script>
 
-<footer class="bg-brand-dark text-white mt-auto pt-20 pb-8 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-6xl">
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 items-start">
-
-            <div class="flex flex-col items-center text-center w-full">
-                <img src="assets/imgs/logo.png" alt="[Company Name] Logo" loading="lazy"
-                    class="w-36 md:w-42 h-auto object-contain mb-8 mx-auto">
-
-                <a href="contact.html"
-                    class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-white text-[#1A2E24] font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 w-fit sm:w-auto shadow-lg">
-                    
-                    <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0fdb62] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
-
-                    <span class="relative z-10 transition-colors duration-500 group-hover:text-[#1A2E24]">[Footer CTA Text]</span>
-
-                    <span class="relative z-10 w-10 h-10 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white group-hover:text-[#1A2E24] -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M5 12h14m-6-6l6 6-6 6"></path>
-                        </svg>
-                    </span>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center text-center w-full">
-                <h3 class="font-heading text-3xl lg:text-4xl font-semibold mb-8 text-white relative pb-2">
-                    Contact
-                </h3>
-
-                <div class="flex flex-col gap-6 items-center">
-                    <div class="flex flex-col items-center">
-                        <span class="text-[#0fdb62] text-xs uppercase tracking-[0.2em] font-bold mb-1">Email us</span>
-                        <a href="mailto:[Company Email]"
-                            class="font-body text-base lg:text-lg text-white hover:text-[#EDC237] transition-colors font-medium">
-                            [Company Email]
-                        </a>
-                    </div>
-
-                    <div class="flex flex-col items-center">
-                        <span class="text-[#0fdb62] text-xs uppercase tracking-[0.2em] font-bold mb-1">Call us</span>
-                        <a href="tel:[Company Phone Number]"
-                            class="font-body text-base lg:text-lg text-white hover:text-[#EDC237] transition-colors font-medium">
-                            [Company Phone Number]
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col items-center w-full">
-                <div class="flex flex-col items-center w-fit">
-                    <h3 class="font-heading text-3xl lg:text-4xl font-semibold mb-8 text-white relative pb-2">
-                        Quick links
-                    </h3>
-
-                    <div
-                        class="grid grid-cols-2 gap-x-12 gap-y-4 font-body text-base lg:text-lg text-white/90 font-medium w-full text-center">
-                        <a href="index.html"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 1]
-                        </a>
-                        <a href="index.html#faq"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 2]
-                        </a>
-                        <a href="about.html"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 3]
-                        </a>
-                        <a href="index.html#reviews"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 4]
-                        </a>
-                        <a href="gallery.html"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 5]
-                        </a>
-                        <a href="contact.html"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 6]
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <hr class="border-white/10 my-12 w-full">
-
-        <div
-            class="flex flex-col md:flex-row justify-center items-center text-center font-body text-sm font-semibold text-white/60 gap-3 md:gap-4 flex-wrap">
-            <span>© [Year] [Company Name] All rights reserved</span>
-            <span class="hidden md:inline text-white/20">|</span>
-            <a href="privacy-policy.html" class="text-white hover:text-[#EDC237] transition-colors">Privacy Policy</a>
-            <span class="hidden md:inline text-white/20">|</span>
-            <span>Website design by <a href="[Agency Link]" target="_blank" rel="noopener noreferrer"
-                    class="text-white hover:text-[#EDC237] underline underline-offset-4 transition-colors">[Agency Name]</a></span>
-        </div>
-
-    </div>
-</footer>
+<div id="footer-placeholder"></div>
 
 <script>
 // Google Sheets form submission

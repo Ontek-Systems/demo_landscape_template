@@ -110,94 +110,7 @@
 
 <body class="flex flex-col min-h-screen bg-brand-beige text-brand-text antialiased">
 
-    <header id="site-header"
-        class="fixed w-full top-0 left-0 z-50 transition-all duration-150 bg-transparent text-white border-b border-transparent">
-        <div id="header-container"
-            class="container mx-auto px-4 md:px-8 py-5 md:py-6 flex justify-between items-center transition-all duration-150">
-
-            <a href="index.html" class="flex items-center logo-link transition-transform duration-200 hover:scale-110">
-                <img src="assets/imgs/logo.png" alt="[Company Name] Logo"
-                    class="logo-white w-[109px] md:w-[136px] lg:w-[163px] h-auto object-contain">
-
-                <img src="assets/imgs/logo-dark.png" alt="[Company Name] Logo"
-                    class="logo-dark w-[109px] md:w-[136px] lg:w-[163px] h-auto object-contain">
-            </a>
-
-            <nav class="hidden xl:flex items-center gap-8 font-body text-[17px] font-semibold tracking-wide">
-                <a href="about.html" class="whitespace-nowrap">[Nav Link 1]</a>
-                <a href="services.html" class="whitespace-nowrap">[Nav Link 2]</a>
-                <a href="gallery.html" class="whitespace-nowrap">[Nav Link 3]</a>
-                <a href="index.html#faq" class="whitespace-nowrap">[Nav Link 4]</a>
-                
-                <div class="flex items-center gap-8">
-                    <a href="contact.html" class="whitespace-nowrap">[Nav Link 5]</a>
-                    
-                    <a href="[Google Maps Link]" target="_blank" rel="noopener noreferrer"
-                        class="group gap-1.5 whitespace-nowrap">
-                        [Location Name]
-                        <svg class="w-4 h-4 shrink-0 group-hover:-translate-y-1 transition-transform duration-150"
-                            fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                        </svg>
-                    </a>
-                </div>
-            </nav>
-
-            <button id="menuBtn" aria-expanded="false" aria-controls="mobileNav"
-                class="xl:hidden text-white focus:outline-none p-2 -mr-2 transition-colors duration-150"
-                aria-label="Toggle Mobile Menu">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-        </div>
-
-        <div id="mobileNav"
-            class="xl:hidden absolute top-full left-0 w-full px-4 pt-2 pb-6 transition-all duration-200 ease-out opacity-0 invisible -translate-y-4 pointer-events-none">
-            <div
-                class="bg-brand-dark/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl overflow-hidden">
-                <div class="flex flex-col px-6 py-6 space-y-4 text-center font-body text-white">
-                    <a href="about.html"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">[Nav Link 1]</a>
-                    <a href="services.html"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">[Nav Link 2]</a>
-                    <a href="gallery.html"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">[Nav Link 3]</a>
-                    <a href="index.html#faq"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">[Nav Link 4]</a>
-                    <div class="pt-6 mt-2 border-t border-white/10">
-                        <a href="contact.html"
-                            class="inline-block w-full px-8 py-3.5 bg-brand-accent text-brand-dark font-bold rounded-xl hover:bg-white transition-colors duration-150">[CTA Button]</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.getElementById('site-header');
-            const container = document.getElementById('header-container');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                    header.classList.remove('bg-transparent', 'border-transparent');
-                    header.classList.add('bg-brand-dark/95', 'backdrop-blur-md', 'shadow-md', 'border-white/10');
-                    container.classList.remove('py-5', 'md:py-6');
-                    container.classList.add('py-2', 'md:py-3');
-                } else {
-                    header.classList.remove('scrolled');
-                    header.classList.add('bg-transparent', 'border-transparent');
-                    header.classList.remove('bg-brand-dark/95', 'backdrop-blur-md', 'shadow-md', 'border-white/10');
-                    container.classList.add('py-5', 'md:py-6');
-                    container.classList.remove('py-2', 'md:py-3');
-                }
-            });
-        });
-    </script>
+    <div id="header-placeholder"></div>
 <main class="bg-brand-beige min-h-screen">
     <script type="application/ld+json">
     {
@@ -820,7 +733,7 @@
                 <div class="lg:col-span-3 reveal reveal-up order-2 lg:order-1 flex justify-center lg:justify-start">
                     <div
                         class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[1.5rem] overflow-hidden group">
-                        <img src="assets/imgs/After_2.jpg" alt="[Image 1 Alt]" loading="lazy"
+                        <img src="assets/imgs/footer1.png" alt="[Image 1 Alt]" loading="lazy"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     </div>
                 </div>
@@ -887,7 +800,7 @@
                     style="transition-delay: 200ms;">
                     <div
                         class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[1.5rem] overflow-hidden group">
-                        <img src="assets/imgs/After_1.jpg" alt="[Image 2 Alt]" loading="lazy"
+                        <img src="assets/imgs/footer2.png" alt="[Image 2 Alt]" loading="lazy"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     </div>
                 </div>
@@ -922,115 +835,7 @@
 
 </main>
 
-<footer class="bg-brand-dark text-white mt-auto pt-20 pb-8 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-6xl">
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 items-start">
-
-            <div class="flex flex-col items-center text-center w-full">
-                <img src="assets/imgs/logo.png" alt="[Company Name] Logo" loading="lazy"
-                    class="w-36 md:w-42 h-auto object-contain mb-8 mx-auto">
-
-                <a href="contact.html"
-                    class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-white text-[#1A2E24] font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 w-fit sm:w-auto shadow-lg">
-                    
-                    <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0fdb62] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
-
-                    <span class="relative z-10 transition-colors duration-500 group-hover:text-[#1A2E24]">[Footer CTA Button Text]</span>
-
-                    <span class="relative z-10 w-10 h-10 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white group-hover:text-[#1A2E24] -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M5 12h14m-6-6l6 6-6 6"></path>
-                        </svg>
-                    </span>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center text-center w-full">
-                <h3 class="font-heading text-3xl lg:text-4xl font-semibold mb-8 text-white relative pb-2">
-                    [Contact Title]
-                </h3>
-
-                <div class="flex flex-col gap-6 items-center">
-                    <div class="flex flex-col items-center">
-                        <span class="text-[#0fdb62] text-xs uppercase tracking-[0.2em] font-bold mb-1">[Email CTA Title]</span>
-                        <a href="mailto:[Email Address]"
-                            class="font-body text-base lg:text-lg text-white hover:text-[#EDC237] transition-colors font-medium">
-                            [Email Address]
-                        </a>
-                    </div>
-
-                    <div class="flex flex-col items-center">
-                        <span class="text-[#0fdb62] text-xs uppercase tracking-[0.2em] font-bold mb-1">[Call CTA Title]</span>
-                        <a href="tel:[Phone Number]"
-                            class="font-body text-base lg:text-lg text-white hover:text-[#EDC237] transition-colors font-medium">
-                            [Phone Number]
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col items-center w-full">
-                <div class="flex flex-col items-center w-fit">
-                    <h3 class="font-heading text-3xl lg:text-4xl font-semibold mb-8 text-white relative pb-2">
-                        [Quick Links Title]
-                    </h3>
-
-                    <div
-                        class="grid grid-cols-2 gap-x-12 gap-y-4 font-body text-base lg:text-lg text-white/90 font-medium w-full text-center">
-                        <a href="index.html"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 1]
-                        </a>
-                        <a href="index.html#faq"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 2]
-                        </a>
-                        <a href="about.html"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 3]
-                        </a>
-                        <a href="index.html#reviews"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 4]
-                        </a>
-                        <a href="gallery.html"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 5]
-                        </a>
-                        <a href="contact.html"
-                            class="hover:text-[#EDC237] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#EDC237] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            [Nav Link 6]
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <hr class="border-white/10 my-12 w-full">
-
-        <div
-            class="flex flex-col md:flex-row justify-center items-center text-center font-body text-sm font-semibold text-white/60 gap-3 md:gap-4 flex-wrap">
-            <span>© [Copyright Year] [Company Name] All rights reserved</span>
-            <span class="hidden md:inline text-white/20">|</span>
-            <a href="privacy-policy.html" class="text-white hover:text-[#EDC237] transition-colors">[Privacy Policy Link]</a>
-            <span class="hidden md:inline text-white/20">|</span>
-            <span>Website design by <a href="[Agency URL]" target="_blank" rel="noopener noreferrer"
-                    class="text-white hover:text-[#EDC237] underline underline-offset-4 transition-colors">[Agency Name]</a></span>
-        </div>
-
-    </div>
-</footer>
+<div id="footer-placeholder"></div>
 
 <script>
 // Google Sheets form submission
